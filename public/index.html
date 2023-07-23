@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Icons -->
+
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body class="font-[Roboto] bg-[#fff]">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <header id="top-section" class="bg-[#F0F8F8] h-screen p-0 md:px-24 md:pt-8">
+      <!-- NAVIGATION -->
+      <div class="">
+        <nav
+          id="navbar"
+          class="p-6 bg-[#fff] rounded-xl flex items-center justify-between w-[100%] mx-auto"
+        >
+          <div>
+            <span class="text-2xl font-semibold font-[Roboto] cursor-pointer"
+              >LOGO</span
+            >
+          </div>
+          <div
+            class="drop-down md:static absolute md:min-h-fit bg-white min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+          >
+            <ul
+              class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-12"
+            >
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base hover:text-[#55BDB3] duration-500 cursor-pointer font-[Rubik]"
+                  >Home</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base hover:text-[#55BDB3] duration-500 cursor-pointer font-[Rubik]"
+                  >Our Services</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base hover:text-[#55BDB3] duration-500 cursor-pointer font-[Rubik]"
+                  >Our Process</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="#"
+                  class="text-base hover:text-[#55BDB3] duration-500 cursor-pointer font-[Rubik]"
+                  >Why Choose Us</a
+                >
+              </li>
+              <li></li>
+            </ul>
+          </div>
+
+          <div class="flex items-center gap-6">
+            <button
+              class="bg-[#55BDB3] text-white font-[Roboto] duration-1000 px-6 py-2 hover:bg-teal-400 cursor-pointer rounded-lg"
+            >
+              Order now
+            </button>
+            <button
+              class="bg-white text-[#55BDB3] font-[Roboto] border-solid border-2 border-[#55BDB3] duration-500 cursor-pointer px-10 py-1.5 hover:bg-[#55BDB3] hover:border[#55BDB3] hover:text-white rounded-lg"
+            >
+              Login
+            </button>
+            <ion-icon
+              name="menu"
+              class="text-3xl cursor-pointer md:hidden"
+              onclick="onToggleMenu(this)"
+            ></ion-icon>
+          </div>
+        </nav>
+      </div>
+
+      <!-- HERO SECTION -->
+      <div id="hero" class="my-8">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="inline-grid gap-4 col-start-1 col-end-6 mt-8">
+            <h1 class="text-4xl font-[700] text-[#55BDB3] leading-7">
+              WE PROVIDE
+            </h1>
+            <h1 class="text-4xl font-[700] leading-7">ACTION-PROVOKING</h1>
+            <h1 class="text-2xl font-[400]">TO HELP YOU GROW AUDIENCE</h1>
+            <p class="text-sm">
+              Lörem ipsum onas. Ivera. Prende exoment: gigad för tralig
+              nehahusade. Parasocial platinade och tyvaling, suskade, gäv.
+              Beseng kopimism inte teröktig.
+            </p>
+            <div class="mt-12">
+              <button
+                class="bg-[#0F2435] text-white font-[Roboto] duration-1000 px-6 py-2 hover:bg-[#000] cursor-pointer rounded-lg"
+              >
+                Order now
+              </button>
+              <button
+                class="bg-white text-[#0F2435] font-[Roboto] border-solid border-2 border-[#0F2435] duration-500 cursor-pointer px-10 py-1.5 hover:bg-[#0F2435] hover:border[#0F2435] hover:text-white rounded-lg"
+              >
+                Login
+              </button>
+            </div>
+          </div>
+          <div class="inline-grid col-start-6 col-end-13 md:pl-32 relative">
+            <div class="bg-[url('/assets/hero2.png')] bg-no-repeat bg-contain">
+              <div
+                class="inline-grid gap-4 grid-cols-2 bg-white p-4 rounded-lg absolute left-0 bottom-0"
+              >
+                <span class="flex bg-[#F0F8F8] items-center p-1 rounded-lg">
+                  <ion-icon
+                    name="checkmark-circle"
+                    class="text-[#55BDB3]"
+                  ></ion-icon>
+                  <span class="text-sm mx-2">Field-Specific Writers</span>
+                </span>
+                <span class="flex bg-[#F0F8F8] items-center p-1 rounded-lg">
+                  <ion-icon
+                    name="checkmark-circle"
+                    class="text-[#55BDB3]"
+                  ></ion-icon>
+                  <span class="text-sm mx-2">Plagiarism Free Content</span>
+                </span>
+                <span class="flex bg-[#F0F8F8] items-center p-1 rounded-lg">
+                  <ion-icon
+                    name="checkmark-circle"
+                    class="text-[#55BDB3]"
+                  ></ion-icon>
+                  <span class="text-sm mx-2">Flexible Revision Policy</span>
+                </span>
+                <span class="flex bg-[#F0F8F8] items-center p-1 rounded-lg">
+                  <ion-icon
+                    name="checkmark-circle"
+                    class="text-[#55BDB3]"
+                  ></ion-icon>
+                  <span class="text-sm mx-2">Money-back Guarantee</span>
+                </span>
+                <span class="flex bg-[#F0F8F8] items-center p-1 rounded-lg">
+                  <ion-icon
+                    name="checkmark-circle"
+                    class="text-[#55BDB3]"
+                  ></ion-icon>
+                  <span class="text-sm mx-2">complete Ownership</span>
+                </span>
+                <span class="flex bg-[#F0F8F8] items-center p-1 rounded-lg">
+                  <ion-icon
+                    name="checkmark-circle"
+                    class="text-[#55BDB3]"
+                  ></ion-icon>
+                  <span class="text-sm mx-2">24/7 Customer Support</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--  SERVICES -->
+
+    <div class="bg-[#fdfdfd] md:px-48 md:pt-40 md:pb-16 relative" id="services">
+      <img
+        src="/assets/cloud1.png"
+        alt=""
+        class="absolute left-0 mt-96 w-52 max-h-52"
+      />
+      <img
+        src="/assets/cloud2.png"
+        alt=""
+        class="absolute right-0 bottom-0 mb-96 w-52 max-h-52"
+      />
+      <img
+        src="/assets/cloud3.png"
+        alt=""
+        class="absolute right-36 mt-44 w-32 max-h-32 z-[9]"
+      />
+      <div
+        class="bg-[#fff] absolute ml-40 -top-12 p-4 grid gap-4 grid-cols-5 rounded-2xl"
+      >
+        <span class="text-sm font-[400] my-6 my-auto text-[#999]"
+          >powered by</span
+        >
+        <svg
+          viewBox="0 0 96 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-24 h-6 my-6 my-auto"
+        >
+          <path
+            id=""
+            d="M94.3951 21.1868C93.976 21.1909 93.5755 21.365 93.2813 21.6708C92.987 21.9767 92.823 22.3895 92.825 22.819C92.827 23.2484 92.9949 23.6596 93.292 23.9625C93.5891 24.2655 93.9912 24.4356 94.4104 24.4356C94.8296 24.4356 95.2317 24.2655 95.5288 23.9625C95.8259 23.6596 95.9938 23.2484 95.9958 22.819C95.9978 22.3895 95.8338 21.9767 95.5395 21.6708C95.2453 21.365 94.8448 21.1909 94.4256 21.1868H94.3951ZM94.3951 24.2496C94.1202 24.2543 93.8501 24.1753 93.619 24.0227C93.3879 23.8702 93.2061 23.6508 93.0966 23.3923C92.9872 23.1339 92.955 22.848 93.0042 22.5708C93.0533 22.2936 93.1816 22.0376 93.3727 21.8351C93.5639 21.6326 93.8094 21.4927 94.0781 21.4332C94.3469 21.3736 94.6268 21.3971 94.8826 21.5005C95.1383 21.604 95.3584 21.7828 95.5149 22.0144C95.6714 22.246 95.7574 22.52 95.762 22.8017V22.8256C95.7697 23.1951 95.6339 23.5526 95.3843 23.8195C95.1348 24.0864 94.792 24.2409 94.4314 24.2489H94.3955L94.3951 24.2496ZM88.3093 20.743H84.8642V15.2153C84.8642 13.8971 84.8413 12.2003 83.0724 12.2003C81.2782 12.2003 81.0036 13.6364 81.0036 15.1193V20.7426H77.5586V9.37537H80.8658V10.9288H80.9121C81.2431 10.349 81.7214 9.87202 82.296 9.54867C82.8706 9.22532 83.5201 9.06771 84.1752 9.09262C87.6669 9.09262 88.3107 11.4458 88.3107 14.5071L88.3093 20.743ZM73.6714 7.82154C73.276 7.82162 72.8895 7.70155 72.5607 7.47654C72.2319 7.25152 71.9756 6.93166 71.8242 6.5574C71.6728 6.18314 71.6332 5.77129 71.7102 5.37393C71.7873 4.97657 71.9776 4.61156 72.2572 4.32504C72.5367 4.03852 72.8929 3.84336 73.2807 3.76426C73.6685 3.68515 74.0705 3.72564 74.4358 3.88061C74.8011 4.03557 75.1134 4.29806 75.3332 4.63487C75.5529 4.97168 75.6702 5.36769 75.6703 5.77282C75.6703 6.04181 75.6187 6.30818 75.5182 6.55672C75.4178 6.80525 75.2706 7.03109 75.085 7.22133C74.8994 7.41157 74.679 7.5625 74.4365 7.66548C74.1939 7.76846 73.934 7.8215 73.6714 7.82154ZM75.394 20.743H71.9453V9.37537H75.394V20.743ZM90.0268 0.446935H70.2142C69.7645 0.441735 69.3312 0.61967 69.0095 0.941639C68.6878 1.26361 68.504 1.70327 68.4985 2.16401V22.548C68.5038 23.0089 68.6875 23.4489 69.0092 23.7712C69.3309 24.0935 69.7643 24.2718 70.2142 24.2669H90.0268C90.4776 24.2727 90.9122 24.0949 91.2352 23.7726C91.5581 23.4503 91.743 23.0098 91.7493 22.548V2.16254C91.7428 1.70089 91.5578 1.26072 91.2348 0.938764C90.9118 0.616802 90.4773 0.439376 90.0268 0.445464V0.446935ZM59.1219 12.119C57.3994 12.119 56.3659 13.2974 56.3659 15.0145C56.3659 16.7316 57.399 17.9111 59.1219 17.9111C60.8448 17.9111 61.8804 16.7345 61.8804 15.0145C61.8804 13.2945 60.8466 12.119 59.1219 12.119ZM65.052 20.7364H61.8804V19.2289H61.8334C61.4355 19.7772 60.9194 20.224 60.3254 20.5345C59.7313 20.8449 59.0753 21.0107 58.4085 21.0188C55.0984 21.0188 52.9179 18.5711 52.9179 15.1097C52.9179 11.9308 54.8475 9.01173 58.0195 9.01173C59.4452 9.01173 60.7769 9.4114 61.5582 10.5192H61.6034V3.96676H65.0517L65.052 20.7364ZM48.4947 13.7328C48.5013 13.4464 48.451 13.1616 48.3471 12.8958C48.2431 12.6299 48.0875 12.3883 47.8897 12.1859C47.692 11.9834 47.4562 11.8241 47.1966 11.7178C46.937 11.6114 46.659 11.5602 46.3796 11.5671C45.7776 11.5287 45.1851 11.7343 44.7297 12.1394C44.2743 12.5445 43.9925 13.1168 43.9451 13.7328H48.4947ZM51.4129 18.77C50.8404 19.4813 50.1207 20.0532 49.3059 20.4444C48.4911 20.8355 47.6016 21.0361 46.7018 21.0316C43.2568 21.0316 40.4986 18.6755 40.4986 15.027C40.4986 11.3785 43.2564 9.0235 46.7018 9.0235C49.9218 9.0235 51.9411 11.3767 51.9411 15.027V16.1337H43.9451C44.0446 16.7614 44.3622 17.3311 44.8393 17.7377C45.3164 18.1444 45.9209 18.3607 46.5414 18.3468C47.0317 18.3437 47.5135 18.215 47.9429 17.9724C48.3723 17.7298 48.7357 17.381 48.9999 16.9577L51.4129 18.77ZM17.1656 9.37243H20.4739V10.9259H20.5209C20.8514 10.3458 21.3294 9.86862 21.9039 9.54522C22.4784 9.22181 23.1279 9.06436 23.783 9.08968C27.2765 9.08968 27.9195 11.4447 27.9195 14.5042V20.7379H24.4745V15.2112C24.4745 13.892 24.4508 12.1962 22.6802 12.1962C20.8895 12.1962 20.6132 13.6328 20.6132 15.1153V20.7364H17.1681L17.1656 9.37243ZM29.6664 3.96786H33.1115V13.9927L37.0159 9.36618H41.2396L36.718 14.6288L41.1445 20.7434H36.8145L33.1574 15.1245H33.1122V20.7426H29.6672L29.6664 3.96786ZM11.8104 9.37132H15.2554V20.7386H11.8104V9.37132ZM13.5329 3.72004C13.9281 3.72012 14.3145 3.84027 14.6431 4.06531C14.9717 4.29035 15.2278 4.61017 15.379 4.98433C15.5302 5.35849 15.5697 5.77019 15.4926 6.16737C15.4154 6.56454 15.2251 6.92936 14.9456 7.21569C14.666 7.50202 14.31 7.697 13.9223 7.77597C13.5346 7.85495 13.1328 7.81438 12.7677 7.65939C12.4025 7.5044 12.0904 7.24195 11.8708 6.90523C11.6513 6.56851 11.5341 6.17264 11.5341 5.76767C11.5341 5.49874 11.5858 5.23245 11.6862 4.98399C11.7867 4.73554 11.9339 4.50979 12.1195 4.31965C12.3051 4.12951 12.5255 3.97869 12.768 3.87581C13.0105 3.77292 13.2704 3.72 13.5329 3.72004ZM0 3.97044H3.58607V17.3541H10.2249V20.7448H0V3.97044ZM94.6467 22.9142C94.7057 22.9148 94.7642 22.903 94.8185 22.8794C94.8729 22.8559 94.922 22.8212 94.9627 22.7775C95.0034 22.7337 95.0349 22.6818 95.0552 22.6251C95.0756 22.5684 95.0843 22.5079 95.0809 22.4476C95.0809 22.1167 94.8861 21.9586 94.4863 21.9586H93.8403V23.6911H94.0833V22.9359H94.3819L94.3887 22.9451L94.852 23.6911H95.1118L94.6133 22.919L94.6467 22.9142ZM94.3657 22.7406H94.084V22.1549H94.4411C94.6255 22.1549 94.8358 22.1858 94.8358 22.4332C94.8358 22.7178 94.623 22.7406 94.3643 22.7406"
+            fill="#0A66C2"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="my-6 my-auto"
+          width="97"
+          height="19"
+          viewBox="0 0 97 19"
+          fill="none"
+        >
+          <path
+            d="M7.07745 18.0171H3.46007V9.42691H0.99585V6.63011H3.45998V4.63999C3.45998 2.28169 4.54987 0.590332 8.15745 0.590332C8.92046 0.590332 10.1183 0.736834 10.1183 0.736834V3.33382H8.86017C7.57819 3.33382 7.07764 3.70528 7.07764 4.73226V6.63011H10.0703L9.80385 9.42691H7.07755L7.07745 18.0171ZM15.3776 6.40661C15.3249 6.40661 15.2707 6.40844 15.217 6.40972C11.8628 6.40972 10.3281 8.81319 10.3281 12.225C10.3281 16.5229 12.3188 18.2431 15.2432 18.2431C16.9164 18.2431 18.0157 17.5722 18.6838 16.3203V18.0183H22.1245V6.6313H18.6838V8.38247C18.1383 7.25581 17.0083 6.41996 15.3776 6.40661ZM16.2525 9.09733C17.6613 9.09733 18.5068 10.0334 18.5068 11.6256L18.5101 13.2519C18.5101 14.325 17.8117 15.5805 16.2525 15.5805C13.8553 15.5805 13.9194 13.1149 13.9194 12.2937C13.9194 9.53126 15.1966 9.09733 16.2525 9.09733ZM23.514 12.3254C23.514 10.9417 23.4445 6.41402 29.6369 6.41402C32.1226 6.41402 33.1606 7.16692 33.1606 7.16692L32.3263 9.63176C32.3263 9.63176 31.2897 9.088 29.939 9.088C28.209 9.088 27.1051 10.0434 27.1051 11.7243L27.107 12.9296C27.107 14.5448 28.1721 15.623 29.9425 15.623C31.1731 15.623 32.3072 15.0741 32.3072 15.0741L33.1393 17.4875C33.1393 17.4875 32.1903 18.2451 29.6542 18.2451C23.7581 18.2451 23.5141 14.1829 23.5141 12.3254H23.514ZM53.3343 6.40972C56.6886 6.40972 58.2475 8.81319 58.2475 12.225C58.2475 16.5229 56.2567 18.2431 53.3323 18.2431C51.6591 18.2431 50.4222 17.5723 49.7541 16.3203V18.0183L46.3567 18.017V0.93656L49.9638 0.63688V8.22819C50.4844 6.90007 52.1953 6.40972 53.3344 6.40972H53.3343ZM52.323 9.09733C50.9142 9.09733 49.9638 10.0334 49.9638 11.6256L49.9605 13.2519C49.9583 14.325 50.6186 15.5805 52.323 15.5805C54.7201 15.5805 54.6561 13.1149 54.6561 12.2937C54.6561 9.53126 53.379 9.09733 52.323 9.09733ZM39.4192 6.41914C35.6147 6.41914 33.6062 8.39509 33.6062 11.9066V12.559C33.6062 17.1165 36.4268 18.2899 39.7895 18.2899C43.058 18.2899 44.5374 17.419 44.5374 17.419L43.8624 15.0999C43.8624 15.0999 42.1222 15.8052 40.2219 15.8052C38.252 15.8052 37.4048 15.327 37.1877 13.5236H44.8258V11.663C44.8258 7.85398 42.5716 6.41905 39.4191 6.41905L39.4192 6.41914ZM39.5109 8.74141C40.8278 8.74141 41.6811 9.51068 41.6343 11.2948H37.1943C37.2713 9.41704 38.1915 8.7415 39.5109 8.7415V8.74141ZM65.4399 6.4035C61.533 6.4035 59.4762 8.5008 59.4762 12.2593C59.4762 17.4161 63.0216 18.2462 65.4464 18.2462C68.9961 18.2462 71.3577 16.4257 71.3577 12.3061C71.3577 8.01832 68.7023 6.4035 65.4399 6.4035ZM65.3907 9.10666C67.1087 9.10666 67.7894 10.3314 67.7894 11.7256V12.9242C67.7894 14.6131 66.8369 15.59 65.3842 15.59C64.0256 15.59 63.0708 14.6762 63.0708 12.9242V11.7256C63.0708 9.85709 64.207 9.10666 65.3907 9.10666ZM78.5437 6.4035C74.6368 6.4035 72.58 8.5008 72.58 12.2593C72.58 17.4161 76.1255 18.2462 78.5502 18.2462C82.0998 18.2462 84.4615 16.4257 84.4615 12.3061C84.4615 8.01832 81.8061 6.4035 78.5437 6.4035ZM78.4945 9.10666C80.2125 9.10666 80.8931 10.3314 80.8931 11.7256V12.9242C80.8931 14.6131 79.9406 15.59 78.488 15.59C77.1294 15.59 76.1746 14.6762 76.1746 12.9242V11.7256C76.1746 9.85709 77.3108 9.10666 78.4945 9.10666ZM85.8246 18.0171V0.93656L89.4422 0.63688V12.0853L93.0312 6.63011H96.8517L93.1077 12.2801L96.9958 18.0171H93.1646L89.4422 12.4466V18.0171H85.8246Z"
+            fill="#1877F2"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="my-6 my-auto"
+          width="97"
+          height="33"
+          viewBox="0 0 97 33"
+          fill="none"
+        >
+          <path
+            d="M42.0781 17.2865C42.0781 21.9242 38.5214 25.3416 34.1565 25.3416C29.7915 25.3416 26.2348 21.9242 26.2348 17.2865C26.2348 12.6162 29.7915 9.23145 34.1565 9.23145C38.5214 9.23145 42.0781 12.6162 42.0781 17.2865ZM38.6104 17.2865C38.6104 14.3884 36.549 12.4055 34.1565 12.4055C31.764 12.4055 29.7025 14.3884 29.7025 17.2865C29.7025 20.1556 31.764 22.1675 34.1565 22.1675C36.549 22.1675 38.6104 20.1519 38.6104 17.2865Z"
+            fill="#EA4335"
+          />
+          <path
+            d="M59.1676 17.2865C59.1676 21.9242 55.6109 25.3416 51.246 25.3416C46.881 25.3416 43.3243 21.9242 43.3243 17.2865C43.3243 12.6198 46.881 9.23145 51.246 9.23145C55.6109 9.23145 59.1676 12.6162 59.1676 17.2865ZM55.6999 17.2865C55.6999 14.3884 53.6385 12.4055 51.246 12.4055C48.8534 12.4055 46.792 14.3884 46.792 17.2865C46.792 20.1556 48.8534 22.1675 51.246 22.1675C53.6385 22.1675 55.6999 20.1519 55.6999 17.2865Z"
+            fill="#FBBC05"
+          />
+          <path
+            d="M75.545 9.71809V24.1795C75.545 30.1282 72.1058 32.5578 68.0399 32.5578C64.2126 32.5578 61.9091 29.9466 61.0403 27.8111L64.0595 26.5292C64.5971 27.8402 65.9144 29.3873 68.0363 29.3873C70.6389 29.3873 72.2517 27.7494 72.2517 24.6661V23.5076H72.1307C71.3545 24.4845 69.8592 25.338 67.9723 25.338C64.0239 25.338 60.4066 21.8298 60.4066 17.3156C60.4066 12.7687 64.0239 9.23145 67.9723 9.23145C69.8557 9.23145 71.351 10.0849 72.1307 11.0328H72.2517V9.72172H75.545V9.71809ZM72.4974 17.3156C72.4974 14.4792 70.6425 12.4055 68.282 12.4055C65.8895 12.4055 63.885 14.4792 63.885 17.3156C63.885 20.1229 65.8895 22.1675 68.282 22.1675C70.6425 22.1675 72.4974 20.1229 72.4974 17.3156Z"
+            fill="#4285F4"
+          />
+          <path
+            d="M80.9745 1.2417V24.8476H77.5922V1.2417H80.9745Z"
+            fill="#34A853"
+          />
+          <path
+            d="M94.1547 19.9374L96.8463 21.7677C95.9776 23.0788 93.8842 25.3377 90.2669 25.3377C85.7809 25.3377 82.4307 21.8004 82.4307 17.2826C82.4307 12.4924 85.8094 9.22754 89.8788 9.22754C93.9767 9.22754 95.9812 12.5542 96.6363 14.3518L96.9959 15.267L86.4396 19.7267C87.2478 21.3428 88.5045 22.1672 90.2669 22.1672C92.0328 22.1672 93.2575 21.2811 94.1547 19.9374ZM85.8699 17.0393L92.9264 14.0504C92.5384 13.0444 91.3706 12.3435 89.9963 12.3435C88.234 12.3435 85.7809 13.9306 85.8699 17.0393Z"
+            fill="#EA4335"
+          />
+          <path
+            d="M13.432 15.1909V11.7735H24.7217C24.8321 12.3691 24.889 13.0736 24.889 13.8362C24.889 16.4002 24.2019 19.5707 21.9874 21.8296C19.8334 24.1175 17.0813 25.3378 13.4355 25.3378C6.67809 25.3378 0.99585 19.7232 0.99585 12.8303C0.99585 5.93734 6.67809 0.322754 13.4355 0.322754C17.1739 0.322754 19.837 1.81901 21.8379 3.76922L19.4738 6.18066C18.039 4.80788 16.0951 3.74017 13.432 3.74017C8.49741 3.74017 4.63804 7.79676 4.63804 12.8303C4.63804 17.8638 8.49741 21.9204 13.432 21.9204C16.6327 21.9204 18.4556 20.6093 19.6234 19.4181C20.5704 18.4521 21.1934 17.0721 21.4391 15.1872L13.432 15.1909Z"
+            fill="#4285F4"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="my-6 my-auto"
+          width="80"
+          height="79"
+          viewBox="0 0 80 79"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M14.9811 43.9342C14.3722 43.9342 13.8955 44.3602 13.8955 44.9818C13.8955 45.6039 14.3747 46.0274 14.9811 46.0274C15.5872 46.0274 16.0668 45.601 16.0668 44.9818C16.0668 44.3602 15.5897 43.9342 14.9811 43.9342ZM14.9811 45.7279C14.5469 45.7279 14.2249 45.4107 14.2249 44.9818C14.2249 44.5534 14.5445 44.2338 14.9811 44.2338C15.4125 44.2338 15.737 44.5583 15.737 44.9818C15.737 45.4029 15.4096 45.7279 14.9811 45.7279ZM25.5453 40.27H20.2601L20.8609 31.0837L17.4287 40.27H12.5209L20.308 19.5063H25.5301L24.9274 28.8187L28.4246 19.5063H33.3328L25.5453 40.27ZM26.1829 40.27L33.9696 19.5063H38.8774L31.0907 40.27H26.1829Z"
+            fill="black"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M11.9549 33.1135C5.0967 41.1674 -1.37274 51.8838 4.34168 56.8187C9.87891 61.6009 16.8001 58.7694 21.5193 56.8817C26.2385 54.9939 78.3996 32.3425 78.3996 32.3425C78.9029 32.0908 78.8088 31.7761 78.1794 31.9333C77.9257 31.9967 21.3937 47.3173 21.3937 47.3173C14.22 49.3311 6.04038 44.9421 11.9549 33.1135Z"
+            fill="black"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M15.1661 45.0555C15.3183 45.0481 15.4374 44.9695 15.4374 44.7588C15.4374 44.487 15.2598 44.4187 14.9631 44.4187H14.5367V45.5453H14.8211V45.0657H14.869L15.128 45.5453H15.455L15.1661 45.0555ZM14.9836 44.8729H14.8215V44.6115H14.9582C15.0421 44.6115 15.1382 44.6213 15.1382 44.7305C15.1382 44.8476 15.0826 44.8729 14.9836 44.8729ZM64.3165 19.4429C63.7075 19.4429 63.2308 19.8693 63.2308 20.4905C63.2308 21.1121 63.7104 21.5356 64.3165 21.5356C64.9225 21.5356 65.4021 21.1092 65.4021 20.4905C65.4026 19.8693 64.9258 19.4429 64.3165 19.4429ZM64.3165 21.2369C63.8823 21.2369 63.5602 20.9198 63.5602 20.4909C63.5602 20.0624 63.8798 19.7428 64.3165 19.7428C64.7478 19.7428 65.0727 20.0673 65.0727 20.4909C65.0727 20.912 64.7453 21.2369 64.3165 21.2369Z"
+            fill="black"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M64.5019 20.5642C64.6541 20.5568 64.7736 20.4783 64.7736 20.2675C64.7736 19.9958 64.5956 19.9274 64.2993 19.9274H63.8729V21.0536H64.1569V20.5744H64.2052L64.4638 21.0536H64.7912L64.5019 20.5642ZM64.3189 20.3817H64.1569V20.1202H64.294C64.3775 20.1202 64.474 20.1304 64.474 20.2397C64.474 20.3563 64.418 20.3817 64.3189 20.3817ZM61.0828 22.9672L62.4017 19.5063H47.4265L42.2846 25.7356L44.6585 19.5063H39.6877L31.9631 40.27H36.871L40.1689 31.5871L40.3948 40.27L55.4539 40.2373L56.8874 36.2433H51.1619L53.0431 31.2098H57.7619L59.2139 27.3401H54.4951L56.1127 22.9672H61.0828ZM45.2638 38.8856L44.9491 28.0637L52.3696 19.9164L45.2638 38.8856Z"
+            fill="black"
+          />
+        </svg>
+      </div>
+      <div class="">
+        <div class="grid text-center">
+          <h1 class="md:text-2xl font-[600] mb-8">Our Services and Prices</h1>
+          <p class="md:max-w-3xl mx-auto text-sm">
+            ContentAlpha offers optimal solutions at affordable rates for every
+            content need. Understanding your requirements and generating results
+            that satisfy you is our core mission. With us, you will be able to
+            get the maximum possible ROI.
+          </p>
+        </div>
+        <div class="grid grid-cols-3 md:pt-32 gap-8">
+          <div
+            class="w-72 h-72 bg-white border-2 border-[#267BFF] rounded-2xl p-4 shadow-xl"
+          >
+            <ion-icon
+              name="document-text-outline"
+              class="text-[#267BFF] w-8 h-9"
+            ></ion-icon>
+            <h1 class="text-[#267BFF] font-[500] my-8">Article Writing</h1>
+            <p class="text-[#999] text-base">
+              Lörem ipsum polysam spetila pyde. Trapolig regnbågsbarn och beligt
+              ehylig viktigt
+            </p>
+            <ion-icon name="arrow-forward" class="text-[#267BFF]"></ion-icon>
+          </div>
+          <div
+            class="w-72 h-72 bg-white border-2 border-[#21DAFF] rounded-2xl p-4 shadow-xl"
+          >
+            <ion-icon
+              name="document-text-outline"
+              class="text-[#21DAFF] w-8 h-9"
+            ></ion-icon>
+            <h1 class="text-[#21DAFF] font-[500] my-8">Content Writing</h1>
+            <p class="text-[#999] text-base">
+              Lörem ipsum polysam spetila pyde. Trapolig regnbågsbarn och beligt
+              ehylig viktigt
+            </p>
+            <ion-icon name="arrow-forward" class="text-[#21DAFF]"></ion-icon>
+          </div>
+          <div
+            class="w-72 h-72 bg-white border-2 border-[#FF834B] rounded-2xl p-4 shadow-xl z-[10]"
+          >
+            <ion-icon
+              name="document-text-outline"
+              class="text-[#FF834B] w-8 h-9"
+            ></ion-icon>
+            <h1 class="text-[#FF834B] font-[500] my-8">Ebook Writing</h1>
+            <p class="text-[#999] text-base">
+              Lörem ipsum polysam spetila pyde. Trapolig regnbågsbarn och beligt
+              ehylig viktigt
+            </p>
+            <ion-icon name="arrow-forward" class="text-[#FF834B]"></ion-icon>
+          </div>
+          <div
+            class="w-72 h-72 bg-white border-2 border-[#FF9318] rounded-2xl p-4 shadow-xl"
+          >
+            <ion-icon
+              name="document-text-outline"
+              class="text-[#FF9318] w-8 h-9"
+            ></ion-icon>
+            <h1 class="text-[#FF9318] font-[500] my-8">Article Writing</h1>
+            <p class="text-[#999] text-base">
+              Lörem ipsum polysam spetila pyde. Trapolig regnbågsbarn och beligt
+              ehylig viktigt
+            </p>
+            <ion-icon name="arrow-forward" class="text-[#FF9318]"></ion-icon>
+          </div>
+          <div
+            class="w-72 h-72 bg-white border-2 border-[#5252FF] rounded-2xl p-4 shadow-xl"
+          >
+            <ion-icon
+              name="document-text-outline"
+              class="text-[#5252FF] w-8 h-9"
+            ></ion-icon>
+            <h1 class="text-[#5252FF] font-[500] my-8">Content Writing</h1>
+            <p class="text-[#999] text-base">
+              Lörem ipsum polysam spetila pyde. Trapolig regnbågsbarn och beligt
+              ehylig viktigt
+            </p>
+            <ion-icon name="arrow-forward" class="text-[#5252FF]"></ion-icon>
+          </div>
+          <div
+            class="w-72 h-72 bg-white border-2 border-[#E72AFF] rounded-2xl p-4 shadow-xl"
+          >
+            <ion-icon
+              name="document-text-outline"
+              class="text-[#E72AFF] w-8 h-9"
+            ></ion-icon>
+            <h1 class="text-[#E72AFF] font-[500] my-8">Ebook Writing</h1>
+            <p class="text-[#999] text-base">
+              Lörem ipsum polysam spetila pyde. Trapolig regnbågsbarn och beligt
+              ehylig viktigt
+            </p>
+            <ion-icon name="arrow-forward" class="text-[#E72AFF]"></ion-icon>
+          </div>
+        </div>
+
+        <!-- CALCULATOR -->
+
+        <div class="mb-16 mt-24">
+          <h1 class="text-xl font-[500] mb-6">Calculate Your Price</h1>
+
+          <div
+            class="grid grid-cols-6 rounded-lg max-w-5xl gap-4 shadow-xl p-4 bg-[#ffffff]"
+          >
+            <div class="grid grid-cols-7 col-start-1 col-end-6 gap-4">
+              <div class="col-start-1 col-end-4">
+                <label
+                  for="countries"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  <span class="text-[#55BDB3]">Service Types</span></label
+                >
+                <select
+                  id=""
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                >
+                  <option selected>Writing</option>
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="FR">France</option>
+                  <option value="DE">Germany</option>
+                </select>
+              </div>
+
+              <div class="col-start-4 col-end-7">
+                <label
+                  for="large-input"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  ><span class="text-[#55BDB3]">Quantity</span></label
+                >
+                <input
+                  placeholder="100"
+                  type="text"
+                  id="large-input"
+                  class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                />
+              </div>
+              <div class="col-start-1 col-end-3">
+                <label
+                  for="large-input"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  ><span class="text-[#55BDB3]">Due Date</span></label
+                >
+                <input
+                  placeholder="100"
+                  type="text"
+                  id=""
+                  class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                />
+              </div>
+              <div class="col-start-3 col-end-5">
+                <label
+                  for="large-input"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  ><span class="text-[#55BDB3]">Words</span></label
+                >
+                <input
+                  placeholder="100"
+                  type="text"
+                  id=""
+                  class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                />
+              </div>
+              <div class="col-start-5 col-end-7">
+                <label
+                  for="countries"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  ><span class="text-[#55BDB3]">Quality</span></label
+                >
+                <select
+                  id=""
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                >
+                  <option selected>Experts</option>
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="FR">France</option>
+                  <option value="DE">Germany</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 gap-4">
+              <div>
+                <h1 class="text-5xl font-[700] text-[#55BDB3]">$11.7</h1>
+              </div>
+              <hr
+                class="border-t-0 border-b-2 border[#55BDB3] border-dotted h-0"
+              />
+              <button
+                class="bg-[#0F2435] text-white font-[Roboto] duration-1000 px-6 py-2 hover:bg-teal-400 cursor-pointer rounded-lg"
+              >
+                Order now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COUPON -->
+    <div class="relative w-[90%] mx-auto md:pb-16">
+      <div
+        class="bg-[url('/assets/rectangle.png')] bg-no-repeat h-[100%] py-12 px-16 ml-6"
+      >
+        <div class="bg-white max-w-lg max-h-60 p-8 grid gap-8 rounded-lg">
+          <p class="text-3xl font-[500]">
+            Get your content needs catered and
+            <span class="text-[#55BDB3]"> boost your business</span> with this
+            amazing discount of 20%.
+          </p>
+          <div class="flex items-center gap-6">
+            <button
+              class="bg-[#0F2435] text-white font-[Roboto] duration-1000 px-6 py-2 hover:bg-[#000] cursor-pointer rounded-lg"
+            >
+              Order now
+            </button>
+            <button
+              class="bg-white text-[#0F2435] font-[Roboto] border-solid border-2 border-[#0F2435] duration-500 cursor-pointer px-10 py-1.5 hover:bg-[#0F2435] hover:border[#0F2435] hover:text-white rounded-lg"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHY US -->
+    <div class="relative md:mb-16 md:px-48">
+      <div class="grid text-center mb-24">
+        <h1 class="text-2xl mb-8 font-[500]">Reasons We Are No. 1</h1>
+        <p class="text-sm max-w-xl mx-auto">
+          Customer satisfaction is our priority, and we ensure to deliver what
+          we promise. Let us align our innovative ideas and strategies to your
+          needs to generate unique and powerful results.
+        </p>
+      </div>
+      <div class="grid grid-cols-3 gap-8">
+        <div class="bg-[#ECF3FE] p-6 rounded-lg flex items-center">
+          <ion-icon
+            name="document-text-outline"
+            class="w-6 h-6 mr-2"
+          ></ion-icon>
+          <span class="text-xl font-[500]">Custom Content</span>
+        </div>
+        <div class="bg-[#FEF8E6] p-6 rounded-lg flex items-center">
+          <ion-icon name="pencil-outline" class="w-6 h-6 mr-2"></ion-icon>
+          <span class="text-xl font-[500]">Complete Research</span>
+        </div>
+        <div class="bg-[#FDF4F0] p-6 rounded-lg flex items-center">
+          <ion-icon name="star-outline" class="w-6 h-6 mr-2"></ion-icon>
+          <span class="text-xl font-[500]">Quality Assured</span>
+        </div>
+        <div class="bg-[#E7FAF3] p-6 rounded-lg flex items-center">
+          <ion-icon name="car-sport-outline" class="w-6 h-6 mr-2"></ion-icon>
+          <span class="text-xl font-[500]">Fastest Delivery</span>
+        </div>
+        <div class="bg-[#F1F1FB] p-6 rounded-lg flex items-center">
+          <ion-icon name="bulb-outline" class="w-6 h-6 mr-2"></ion-icon>
+          <span class="text-xl font-[500]">SEO Optimized</span>
+        </div>
+        <div class="bg-[#ECF3FE] p-6 rounded-lg flex items-center">
+          <ion-icon name="checkbox-outline" class="w-6 h-6 mr-2"></ion-icon>
+          <span class="text-xl font-[500]">24/7 Support</span>
+        </div>
+        <div class="bg-[#FEF8E6] p-6 rounded-lg flex items-center">
+          <ion-icon name="pencil-outline" class="w-6 h-6 mr-2"></ion-icon>
+          <span class="text-xl font-[500]">Dedicated Writers</span>
+        </div>
+        <div class="bg-[#FDF4F0] p-6 rounded-lg flex items-center">
+          <ion-icon
+            name="checkmark-done-outline"
+            class="w-6 h-6 mr-2"
+          ></ion-icon>
+          <span class="text-xl font-[500]">Satisfaction</span>
+        </div>
+        <div class="bg-[#E7FAF3] p-6 rounded-lg flex items-center">
+          <ion-icon name="sync-circle-outline" class="w-6 h-6 mr-2"></ion-icon>
+          <span class="text-xl font-[500]">Flexible Revision</span>
+        </div>
+        <div
+          class="bg-[#FEF8E6] p-6 rounded-lg flex items-center col-start-2 col-end-3"
+        >
+          <ion-icon name="star-outline" class="w-6 h-6 mr-2"></ion-icon>
+          <span class="text-xl font-[500]">Money Back Guarantee</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- OUR STATS -->
+    <div class="bg-[#F0F8F8] md:mb-16 md:px-48 pt-16 pb-8 rounded-xl">
+      <div class="grid text-center mb-16">
+        <h1 class="text-2xl mb-8 font-[500]">Reasons We Are No. 1</h1>
+        <p class="text-sm max-w-xl mx-auto">
+          Customer satisfaction is our priority, and we ensure to deliver what
+          we promise. Let us align our innovative ideas and strategies to your
+          needs to generate unique and powerful results.
+        </p>
+      </div>
+      <hr class="border-t-0 border-b-2 border-[#999] border-dashed h-0" />
+      <div class="grid grid-cols-4 my-12">
+        <div>
+          <h1 class="font-[700] text-4xl mb-4">350+</h1>
+          <p class="text-lg font-[400]">Projects in Progress</p>
+        </div>
+        <div>
+          <h1 class="font-[700] text-4xl mb-4">18250+</h1>
+          <p class="text-lg font-[400]">Files Delivered</p>
+        </div>
+        <div>
+          <h1 class="font-[700] text-4xl mb-4">5000+</h1>
+          <p class="text-lg font-[400]">Happy Clients</p>
+        </div>
+        <div>
+          <h1 class="font-[700] text-4xl mb-4">300+</h1>
+          <p class="text-lg font-[400]">Content Writers</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- COUPON 2-->
+    <div class="relative w-[90%] mx-auto md:pb-16">
+      <div
+        class="bg-[url('/assets/rectangle2.png')] bg-no-repeat h-[100%] py-12 px-16 ml-6"
+      >
+        <div class="bg-white max-w-lg max-h-60 p-8 grid gap-8 rounded-lg">
+          <p class="text-3xl font-[500]">
+            Get your content needs catered and
+            <span class="text-[#55BDB3]"> boost your business</span> with this
+            amazing discount of 20%.
+          </p>
+          <div class="flex items-center gap-6">
+            <button
+              class="bg-[#0F2435] text-white font-[Roboto] duration-1000 px-6 py-2 hover:bg-[#000] cursor-pointer rounded-lg"
+            >
+              Order now
+            </button>
+            <button
+              class="bg-white text-[#0F2435] font-[Roboto] border-solid border-2 border-[#0F2435] duration-500 cursor-pointer px-10 py-1.5 hover:bg-[#0F2435] hover:border[#0F2435] hover:text-white rounded-lg"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div
+      class="bg-[#F0F8F8] md:mb-16 md:px-24 pt-16 pb-8 rounded-xl relative h-screen"
+    >
+      <img
+        src="/assets/cloud3.png"
+        alt=""
+        class="absolute -left-12 top-0 w-32 max-h-32"
+      />
+      <img
+        src="/assets/cloud2.png"
+        alt=""
+        class="absolute right-0 bottom-5 w-64 max-h-64"
+      />
+      <div class="bg-white p-0 absolute -bottom-32 right-56 mr-96">
+        <p class="">
+          <ion-icon name="arrow-up-circle-outline" class="w-8 h-8"></ion-icon>
+        </p>
+        <p class="">
+          <ion-icon name="arrow-down-circle-outline" class="w-8 h-8"></ion-icon>
+        </p>
+      </div>
+
+      <div class="grid text-center mb-20">
+        <h1 class="text-2xl font-[500]">SEO Content Bundle Packages</h1>
+        <p class="text-sm max-w-xl mx-auto">
+          Be the echo in the digital world! Boost your brand awareness, increase
+          your sales and let your brand be recognized with our new SEO content
+          bundle package.!
+        </p>
+      </div>
+      <div class="grid grid-cols-2 absolute left-40">
+        <div class="bg-white p-8 rounded-xl max-w-xl">
+          <h1 class="font-[500] text-2xl">Master Package</h1>
+          <div
+            class="bg-[#F0F8F8] p-8 mb-4 mt-12 rounded-xl grid grid-cols-1 gap-6 max-w-lg"
+          >
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-circle"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              1 On-Page SEO Analysis
+            </p>
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-circle"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              100 Articles: 500 Words
+            </p>
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-circle"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              100 Blog Posts: 500 Words
+            </p>
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-circle"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              10 Press Release: 600 Words
+            </p>
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-circle"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              10 Designed Info Graphics: 150 words
+            </p>
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-circle"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              30 Business Profiles Submissions
+            </p>
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-circle"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              2 Months Project
+            </p>
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-circle"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              Free Unlimited Revision
+            </p>
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-circle"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              Plagiarism Free Content
+            </p>
+          </div>
+          <div class="bg-[#F0F8F8] p-8 flex items-center">
+            <div class="border-r-2 pr-4 border-dotted border-black mr-4">
+              <p class="text-sm">Total Price</p>
+              <p class="line-through decoration-2 mt-2 font-[600] text-2xl">
+                $14778
+              </p>
+            </div>
+            <div class="mr-20">
+              <p class="text-sm">After Discount</p>
+              <p class="mt-2 font-[600] text-2xl">$8865</p>
+            </div>
+            <div class="flex items-right">
+              <button
+                class="bg-[#0F2435] text-white font-[Roboto] duration-1000 px-6 py-2 hover:bg-[#000] cursor-pointer rounded-lg"
+              >
+                Get Package
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="p-8 rounded-xl max-w-xl bg-transparent">
+          <h1 class="font-[500] text-2xl">Boost Your Website's Rankings</h1>
+          <p class="mt-4">Outperform your competitors and govern your niche.</p>
+          <div class="p-8 my-2 rounded-xl grid grid-cols-1 gap-6 max-w-lg">
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-done-outline"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              1 On-Page SEO Analysis
+            </p>
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-done-outline"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              100 Articles: 500 Words
+            </p>
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-done-outline"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              100 Blog Posts: 500 Words
+            </p>
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-done-outline"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              10 Press Release: 600 Words
+            </p>
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-done-outline"
+                class="mr-2 text-[#55BDB3]"
+              ></ion-icon>
+              10 Designed Info Graphics: 150 words
+            </p>
+            <p class="flex items-center">
+              <ion-icon
+                name="checkmark-done-outline"
+                class="mr-2 font-[600] text-[#55BDB3]"
+              ></ion-icon>
+              10 Designed Info Graphics: 150 words
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Socials -->
+    <div class="grid mt-96 mb-24 relative md:px-24">
+      <div class="my-12 text-center">
+        <h1 class="text-3xl font-[600]">
+          They talk about it
+          <p class="text-3xl">Better then Us!</p>
+        </h1>
+        <p class="text-sm mt-6">
+          Be the echo in the digital world! Boost your brand awareness, increase
+          your sales and let your brand <p class="text-sm ">be recognized with our new SEO content
+            bundle package.!</p> 
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white shadow-2xl p-4 rounded-xl">
+          <div class="grid grid-cols-7 gap-2">
+            <img src="/assets/face1.png" alt="" class="flex justify-self-end w-11 h-11">
+            <div class=" grid text-left grid-rows-2 col-start-2 col-span-5 ">
+              <p class="text-base font-[500]">Qasim Abbasi</p>
+              <p class="text-sm font-[400] text-[#D9D9D9]">@qashiii_says</p>
+            </div>
+            <img src="/assets/insta.png" alt="" class="shadow-lg">
+          </div>
+          <div class="my-4 pl-8">
+            <p class="text-base ">
+              Lörem ipsum prelig krorenade innan plagisk inklusive infraledes. 
+              Korade otende benat. Ultrassade intran. Dedat kronus faning. 
+              Bagt terrakemi ultralar egorade.
+            </p>
+            <p class="mt-4 text-[#55BDB3] underline decoration-solid">See full Post</p>
+          </div>
+        </div>
+        <div class="bg-white shadow-2xl p-4 rounded-xl">
+          <div class="grid grid-cols-7 gap-2">
+            <img src="/assets/face1.png" alt="" class="flex justify-self-end w-11 h-11">
+            <div class=" grid text-left grid-rows-2 col-start-2 col-span-5 ">
+              <p class="text-base font-[500]">Qasim Abbasi</p>
+              <p class="text-sm font-[400] text-[#D9D9D9]">@qashiii_says</p>
+            </div>
+            <img src="/assets/insta.png" alt="" class="shadow-lg">
+          </div>
+          <div class="my-4 pl-8">
+            <p class="text-base ">
+              Lörem ipsum prelig krorenade innan plagisk inklusive infraledes. 
+              Korade otende benat. Ultrassade intran. Dedat kronus faning. 
+              Bagt terrakemi ultralar egorade.
+            </p>
+            <p class="mt-4 text-[#55BDB3] underline decoration-solid">See full Post</p>
+          </div>
+        </div>
+        <div class="bg-white shadow-2xl p-4 rounded-xl">
+          <div class="grid grid-cols-7 gap-2">
+            <img src="/assets/face1.png" alt="" class="flex justify-self-end w-11 h-11">
+            <div class=" grid text-left grid-rows-2 col-start-2 col-span-5 ">
+              <p class="text-base font-[500]">Qasim Abbasi</p>
+              <p class="text-sm font-[400] text-[#D9D9D9]">@qashiii_says</p>
+            </div>
+            <img src="/assets/insta.png" alt="" class="shadow-lg">
+          </div>
+          <div class="my-4 pl-8">
+            <p class="text-base ">
+              Lörem ipsum prelig krorenade innan plagisk inklusive infraledes. 
+              Korade otende benat. Ultrassade intran. Dedat kronus faning. 
+              Bagt terrakemi ultralar egorade.
+            </p>
+            <p class="mt-4 text-[#55BDB3] underline decoration-solid">See full Post</p>
+          </div>
+        </div>
+        <div class="bg-white shadow-2xl p-4 rounded-xl">
+          <div class="grid grid-cols-7 gap-2">
+            <img src="/assets/face1.png" alt="" class="flex justify-self-end w-11 h-11">
+            <div class=" grid text-left grid-rows-2 col-start-2 col-span-5 ">
+              <p class="text-base font-[500]">Qasim Abbasi</p>
+              <p class="text-sm font-[400] text-[#D9D9D9]">@qashiii_says</p>
+            </div>
+            <img src="/assets/insta.png" alt="" class="shadow-lg">
+          </div>
+          <div class="my-4 pl-8">
+            <p class="text-base ">
+              Lörem ipsum prelig krorenade innan plagisk inklusive infraledes. 
+              Korade otende benat. Ultrassade intran. Dedat kronus faning. 
+              Bagt terrakemi ultralar egorade.
+            </p>
+            <p class="mt-4 text-[#55BDB3] underline decoration-solid">See full Post</p>
+          </div>
+        </div>
+        <div class="bg-white shadow-2xl p-4 rounded-xl">
+          <div class="grid grid-cols-7 gap-2">
+            <img src="/assets/face1.png" alt="" class="flex justify-self-end w-11 h-11">
+            <div class=" grid text-left grid-rows-2 col-start-2 col-span-5 ">
+              <p class="text-base font-[500]">Qasim Abbasi</p>
+              <p class="text-sm font-[400] text-[#D9D9D9]">@qashiii_says</p>
+            </div>
+            <img src="/assets/insta.png" alt="" class="shadow-lg">
+          </div>
+          <div class="my-4 pl-8">
+            <p class="text-base ">
+              Lörem ipsum prelig krorenade innan plagisk inklusive infraledes. 
+              Korade otende benat. Ultrassade intran. Dedat kronus faning. 
+              Bagt terrakemi ultralar egorade.
+            </p>
+            <p class="mt-4 text-[#55BDB3] underline decoration-solid">See full Post</p>
+          </div>
+        </div>
+        <div class="bg-white shadow-2xl p-4 rounded-xl">
+          <div class="grid grid-cols-7 gap-2">
+            <img src="/assets/face1.png" alt="" class="flex justify-self-end w-11 h-11">
+            <div class=" grid text-left grid-rows-2 col-start-2 col-span-5 ">
+              <p class="text-base font-[500]">Qasim Abbasi</p>
+              <p class="text-sm font-[400] text-[#D9D9D9]">@qashiii_says</p>
+            </div>
+            <img src="/assets/insta.png" alt="" class="shadow-lg">
+          </div>
+          <div class="my-4 pl-8">
+            <p class="text-base ">
+              Lörem ipsum prelig krorenade innan plagisk inklusive infraledes. 
+              Korade otende benat. Ultrassade intran. Dedat kronus faning. 
+              Bagt terrakemi ultralar egorade.
+            </p>
+            <p class="mt-4 text-[#55BDB3] underline decoration-solid">See full Post</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Samples -->
+    <div class="grid grid-cols-4 bg-[#F0F8F8] gap-x-4 gap-y-8 px-8 py-20 mb-12 mt-12 ">
+      <div class="col-span-2 px-32">
+        <h1 class="text-3xl font-[600] mb-8">Our Samples</h1>
+        <p class="text-base">Don't scratch your head whether you're making the right choice or not; check our statistics. 
+           The numbers are crystal clear, and we talk openly about our progress and achievements.
+        </p>
+      </div>
+      <div class="grid grid-cols-4 gap-x-4 gap-y-8 p-4 rounded-xl bg-white place-items-center ">
+        <div class="mb-4 col-start-1 col-end-4">
+          <h1 class="text-xl text-[#55BDB3] ">EBook 1</h1>
+          <p class="text-sm text-[#999]">Sample | 5074 Words</p>
+        </div>
+        <img src="/assets/pdf 1.png" alt="" class="flex justify-self-end w-7 h-7 p-0.5 bg-[#f3f3f3]"> 
+        <button
+         class="bg-[#0F2435] text-white font-[Roboto] duration-1000 px-6 py-2 hover:bg-[#000] cursor-pointer rounded-lg col-start-1 col-end-3"
+        >
+          Order now
+        </button>
+        <button
+         class="bg-white text-[#0F2435] font-[Roboto] border-solid border-2 border-[#0F2435] duration-500 cursor-pointer col-start-3 col-end-5 px-10 py-1.5 hover:bg-[#0F2435] hover:border[#0F2435] hover:text-white rounded-lg"
+        >
+          Login
+        </button>
+      </div>  
+      <div class="grid grid-cols-4 gap-x-4 gap-y-8 p-4 rounded-xl bg-white place-items-center">
+        <div class="mb-4 col-start-1 col-end-4">
+          <h1 class="text-xl text-[#55BDB3] ">EBook 1</h1>
+          <p class="text-sm text-[#999]">Sample | 5074 Words</p>
+        </div>
+        <img src="/assets/pdf 1.png" alt="" class="flex justify-self-end w-7 h-7 p-0.5 bg-[#f3f3f3]"> 
+        <button
+         class="bg-[#0F2435] text-white font-[Roboto] duration-1000 px-6 py-2 hover:bg-[#000] cursor-pointer rounded-lg col-start-1 col-end-3"
+        >
+          Order now
+        </button>
+        <button
+         class="bg-white text-[#0F2435] font-[Roboto] border-solid border-2 border-[#0F2435] duration-500 cursor-pointer col-start-3 col-end-5 px-10 py-1.5 hover:bg-[#0F2435] hover:border[#0F2435] hover:text-white rounded-lg"
+        >
+          Login
+        </button>
+      </div>  
+      <div class="grid grid-cols-4 gap-x-4 gap-y-8 p-4 rounded-xl bg-white place-items-center">
+        <div class="mb-4 col-start-1 col-end-4">
+          <h1 class="text-xl text-[#55BDB3] ">EBook 1</h1>
+          <p class="text-sm text-[#999]">Sample | 5074 Words</p>
+        </div>
+        <img src="/assets/pdf 1.png" alt="" class="flex justify-self-end w-7 h-7 p-0.5 bg-[#f3f3f3]"> 
+        <button
+         class="bg-[#0F2435] text-white font-[Roboto] duration-1000 px-6 py-2 hover:bg-[#000] cursor-pointer rounded-lg col-start-1 col-end-3"
+        >
+          Order now
+        </button>
+        <button
+         class="bg-white text-[#0F2435] font-[Roboto] border-solid border-2 border-[#0F2435] duration-500 cursor-pointer col-start-3 col-end-5 px-10 py-1.5 hover:bg-[#0F2435] hover:border[#0F2435] hover:text-white rounded-lg"
+        >
+          Login
+        </button>
+      </div>  
+      <div class="grid grid-cols-4 gap-x-4 gap-y-8 p-4 rounded-xl bg-white place-items-center">
+        <div class="mb-4 col-start-1 col-end-4">
+          <h1 class="text-xl text-[#55BDB3] ">EBook 1</h1>
+          <p class="text-sm text-[#999]">Sample | 5074 Words</p>
+        </div>
+        <img src="/assets/pdf 1.png" alt="" class="flex justify-self-end w-7 h-7 p-0.5 bg-[#f3f3f3]"> 
+        <button
+         class="bg-[#0F2435] text-white font-[Roboto] duration-1000 px-6 py-2 hover:bg-[#000] cursor-pointer rounded-lg col-start-1 col-end-3"
+        >
+          Order now
+        </button>
+        <button
+         class="bg-white text-[#0F2435] font-[Roboto] border-solid border-2 border-[#0F2435] duration-500 cursor-pointer col-start-3 col-end-5 px-10 py-1.5 hover:bg-[#0F2435] hover:border[#0F2435] hover:text-white rounded-lg"
+        >
+          Login
+        </button>
+      </div>  
+      <div class="grid grid-cols-4 gap-x-4 gap-y-8 p-4 rounded-xl bg-white place-items-center">
+        <div class="mb-4 col-start-1 col-end-4">
+          <h1 class="text-xl text-[#55BDB3] ">EBook 1</h1>
+          <p class="text-sm text-[#999]">Sample | 5074 Words</p>
+        </div>
+        <img src="/assets/pdf 1.png" alt="" class="flex justify-self-end w-7 h-7 p-0.5 bg-[#f3f3f3]"> 
+        <button
+         class="bg-[#0F2435] text-white font-[Roboto] duration-1000 px-6 py-2 hover:bg-[#000] cursor-pointer rounded-lg col-start-1 col-end-3"
+        >
+          Order now
+        </button>
+        <button
+         class="bg-white text-[#0F2435] font-[Roboto] border-solid border-2 border-[#0F2435] duration-500 cursor-pointer col-start-3 col-end-5 px-10 py-1.5 hover:bg-[#0F2435] hover:border[#0F2435] hover:text-white rounded-lg"
+        >
+          Login
+        </button>
+      </div>  
+      <div class="grid grid-cols-4 gap-x-4 gap-y-8 p-4 rounded-xl bg-white place-items-center">
+        <div class="mb-4 col-start-1 col-end-4">
+          <h1 class="text-xl text-[#55BDB3] ">EBook 1</h1>
+          <p class="text-sm text-[#999]">Sample | 5074 Words</p>
+        </div>
+        <img src="/assets/pdf 1.png" alt="" class="flex justify-self-end w-7 h-7 p-0.5 bg-[#f3f3f3]"> 
+        <button
+         class="bg-[#0F2435] text-white font-[Roboto] duration-1000 px-6 py-2 hover:bg-[#000] cursor-pointer rounded-lg col-start-1 col-end-3"
+        >
+          Order now
+        </button>
+        <button
+         class="bg-white text-[#0F2435] font-[Roboto] border-solid border-2 border-[#0F2435] duration-500 cursor-pointer col-start-3 col-end-5 px-10 py-1.5 hover:bg-[#0F2435] hover:border[#0F2435] hover:text-white rounded-lg"
+        >
+          Login
+        </button>
+      </div>  
+      
+       
+
+      
+    </div>
+ 
+    <!-- FAQ  -->
+     <!-- <div class="text-center mb-24 px-24">
+      <h1 class="text-3xl font-[500]">Need Help? Read FAQs</h1>
+      <div class="grid grid-cols-4 mt-24">
+        <div class="p-8 bg-[#F0F8F8] text-start rounded-xl">
+          <h1 class="text-2xl font-[500] mb-6">Table of Content</h1>
+          <p class="border-b-2 mb-6 pb-4 text-base text-[#55BDB3]">Process</p>
+          <p class="border-b-2 mb-6 pb-4 text-base text-[#C4C4C4]">Process</p>
+          <p class="border-b-2 mb-6 pb-4 text-base text-[#C4C4C4]">Process</p>
+          <p class="border-b-2 mb-6 pb-4 text-base text-[#C4C4C4]">Process</p>
+          <p class="border-b-2 mb-6 pb-4 text-base text-[#C4C4C4]">Process</p>
+        </div>
+
+      </div>
+    </div> -->
+
+    <!-- FOOTER -->
+    <div class="grid grid-cols-1 bg-[#0F2435] px-24 py-12 text-white">
+      <div class="grid grid-cols-3 gap-16 ">
+        <div class="grid gap-4 place-items-start">
+          <h1 class="font-[700] py-12 text-base">LOGO</h1>
+          <p class="text-sm font-[300] mb-4">A platform was designed to address the immediate need to increase the visibility of qualified affordable tutors to parents. </p>    
+          <hr class="text-[#979797]">
+          <p class="ml-10 text-sm font-[300]">info@projexive.com</p>
+          <p class="font-[300]"><ion-icon name="call" class="pr-4 text-[#55BDB3] "></ion-icon> +1-202-555-0112</p>
+          <p class="ml-10 text-sm font-[300]">7038 10th Street <p class="ml-10 text-sm font-[300]"> Mays Landing, NJ 08330</p></p>
+        </div>
+        <div class="">
+          <h1 class="text-base font-[700] grid gap-4 py-12 ">Useful Links</h1>
+          <div class="grid grid-cols-2 gap-y-12 gap-x-8">
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon>Science</p>
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon>Language</p>
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon>Humanities</p>
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon>Body and Mind</p>
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon>Arts and Crafts</p>
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon>Business</p>
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon>Mathematics</p>
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon>About us </p>
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon>Career</p>
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon>Why Tutor</p>
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon> Policies</p>
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon>Meet Team</p>
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon>Latest News</p>
+            <p class="text-sm font-[300]"><ion-icon name="chevron-forward-outline" class="pr-4 text-[#55BDB3]"></ion-icon>Projects</p>
+            </div>
+        </div>
+        <div class="">
+          <h1 class="text-base font-[700]  grid gap-4 py-12">Subscribe</h1>
+          <p class="text-sm font-[300] mb-8">Sign up for our mailing list to get latest updates and offers.</p>         
+          <form>   
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white "> Search</label>
+              <div class="relative">
+                <input type="" id="default-search" class="block w-full p-4 pl-10 text-sm text-[#fff] opacity-25 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email address" required>
+                <button type="submit" class="text-white h-full absolute right-0 bottom-0 bg-[#55BDB3] hover:bg-[#55BDB3] focus:ring-4 focus:outline-none focus:bg-[#55BDB3] font-medium rounded-lg text-sm px-4 py-2 dark:bg-[#55BDB3] dark:hover:bg-[#55BDB3] dark:focus:bg-[#55BDB3]">Send</button>
+              </div>
+          </form>
+           <p class="text-xs text-[#ccc] mt-4">Your mail id is Confidential</p>
+           <hr class="text-[#979797] my-8">   
+           <div class="flex">
+            <ion-icon name="logo-facebook" class="mr-12"></ion-icon>
+            <ion-icon name="logo-twitter"  class="mr-12"></ion-icon>
+            <ion-icon name="logo-google"  class="mr-12"></ion-icon>
+            <ion-icon name="logo-linkedin"></ion-icon>
+           </div>       
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const dropDown = document.querySelector(`.drop-down`);
+      function onToggleMenu(e) {
+        e.name = e.name === `menu` ? `close` : `menu`;
+        dropDown.classList.toggle(`top-[12%]`);
+      }
+    </script>
+  </body>
+</html>
